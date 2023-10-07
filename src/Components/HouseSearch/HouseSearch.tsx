@@ -19,24 +19,25 @@ const HouseSearch = () => {
                 </div>
                        <div className='flex gap-5 justify-between items-center'>
                         <select name="" id="" className='border rounded-full border-rose-500 text-center focus:ring-1 focus:ring-rose-500 focus:border-none transition-all duration-150 ease-out cursor-pointer drop-shadow-lg bg-gray-100/30 shadow-sm text-slate-600 font-bold'>
-                      <option value="rent" className='bg-white text-black'>Rent</option>
+                      <option value="rent" className='bg-white text-black'>Price</option>
+                      <option value="rent" className='bg-white text-black'>USD</option>
                           </select>
                           {/* input */}
                       
                           <RangeComp />
                           {/* input */}
                         <select name="" id="" className='border rounded-full border-rose-500 text-center focus:ring-1 focus:ring-rose-500 focus:border-none transition-all duration-150 ease-out cursor-pointer drop-shadow-lg bg-gray-100/30 shadow-sm text-slate-600 font-bold'>
-                      <option value="home" className='bg-white text-black'>Rooms</option>
+                      <option value="home" className=' bg-white text-rose-600'>Rooms</option>
                   </select>
                 </div>
                   </div>
-                  <div className='px-8 
+                  <div className='px-8 ml-5 md:border-l-2  border-rose-500
                  '>
-                      <div className='text-center md:border-l-2  border-rose-500'>
+                      <div className='text-center '>
                              <p className='text-xl font-semibold text-gray-600'>723</p> <span className='text-xs uppercase font-semibold'> Result </span>
                       </div>
             <div className='text-center'>
-               <button className='px-5 py-2 bg-rose-600 text-white  drop-shadow-2xl  rounded-full shadow-xl shadow-red-500/30 mx-auto'>Search</button>
+               <button className='px-5 py-2 bg-rose-600 text-white  drop-shadow-2xl  rounded-full shadow-xl shadow-red-500/30 mx-auto font-bold hover:bg-rose-700 transition-all ease-linear duration-300'>Search</button>
                      </div>
                   </div>
               </form>

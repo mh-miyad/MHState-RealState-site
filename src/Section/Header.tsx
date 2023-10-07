@@ -9,7 +9,7 @@ const Header = () => {
     
   
   <section
-  className="relative bg-[url('https://i.ibb.co/JKk9Q2j/Banner-Image.png')] bg-cover bg-center  bg-no-repeat flex-shrink-0 rounded-xl py-10   drop-shadow-sm max-w-screen-xl mx-auto "
+  className="relative bg-[url('https://i.ibb.co/JKk9Q2j/Banner-Image.png')] bg-cover bg-center  bg-no-repeat flex-shrink-0 rounded-xl py-10   drop-shadow-sm max-w-screen-xl mx-auto -z-10 "
 >
  
   <div

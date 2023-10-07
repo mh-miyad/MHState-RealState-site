@@ -5,9 +5,11 @@ import {AiOutlineTwitter} from "react-icons/ai"
 import { Dropdown, Navbar ,Avatar } from 'flowbite-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { usePathname, useRouter } from 'next/navigation';
 const NavbarComp = () => {
- const [user,setUser] = useState(false)
-
+  const [user, setUser] = useState(false)
+const path  = usePathname()
+  console.log(path)
   return (
       <>
           <div className='my-2 flex  justify-between px-4 items-center '>
@@ -27,7 +29,7 @@ const NavbarComp = () => {
        <Navbar
       fluid
       rounded
-     className='bg-transparent backdrop-blur-xl inset-0 '>
+     className='bg-transparent backdrop-blur-xl  mb-10 z-10'>
       <Navbar.Brand href="https://flowbite-react.com">
       
         <span className="self-center whitespace-nowrap text-xl font-semibold ">
@@ -36,7 +38,7 @@ const NavbarComp = () => {
       </Navbar.Brand>
       <div className="flex md:order-2">
                   {
-                      user ? <>
+                      user ? <div>
                        <Dropdown
           arrowIcon={false}
           inline
@@ -55,14 +57,14 @@ const NavbarComp = () => {
           </Dropdown.Item>
         
           <Dropdown.Divider />
-          <Dropdown.Item>
+          <Dropdown.Item onClick={()=>setUser(false)}>
             Sign out
           </Dropdown.Item>
-                          </Dropdown></> : <>
-                              <Button className='bg-red-600 hover:bg-rose-500'>
+                          </Dropdown></div> : <div>
+                              <Button className='bg-red-600 hover:bg-rose-500' onClick={()=>setUser(true)}>
                                   LogIn
                       </Button>
-                          </>
+                          </div>
        }
         <Navbar.Toggle />
       </div>
@@ -71,7 +73,7 @@ const NavbarComp = () => {
           
           href="/"
         >
-          <p className='uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 '>
+          <p className={`uppercase  underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 ${path==='/' ? "border-b-2 border-red-500" : "transition-all"} `}>
             Home
           </p>
         </Link>
@@ -79,7 +81,7 @@ const NavbarComp = () => {
           
           href="/agents"
         >
-          <p className='uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 '>
+          <p className={`uppercase hover:underline  underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 ${path==='/agents' ? "border-b-2 border-red-500" : "transition-all"} `}>
             Agents
           </p>
         </Link>
@@ -87,7 +89,7 @@ const NavbarComp = () => {
           
           href="/property"
         >
-          <p className='uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 '>
+          <p className={`uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 ${path==='/property' ? "border-b-2 border-red-500" : "transition-all"} `}>
             Properties
           </p>
         </Link>
@@ -95,7 +97,7 @@ const NavbarComp = () => {
           
           href="/blog"
         >
-          <p className='uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 '>
+          <p className={`uppercase hover:underline underline-offset-8 dark:text-white decoration-red-500 transition-all duration-200 ease-in-out delay-100 ${path==='/blog' ? "border-b-2 border-red-500" : "transition-all"} `}>
             Blog
           </p>
         </Link>
