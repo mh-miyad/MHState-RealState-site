@@ -1,5 +1,5 @@
 {
-  "name": "quilt_text",
+  "name": "mhs-state",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "flowbite-react": "^0.6.4",
     "lucide-react": "^0.284.0",
     "mongoose": "^7.5.4",
-    "next": "latest",
+    "next": "^13.5.4",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.11.0",
