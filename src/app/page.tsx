@@ -1,5 +1,6 @@
 import CardComp from '@/Components/card/CardComp'
 import CountComp from '@/Section/CountUp'
+import Feature from '@/Section/Feature'
 import Header from '@/Section/Header'
 import React from 'react'
 
@@ -8,9 +9,14 @@ const Home = () => {
   return (
     <>
     <Header />
-      <div className='flex justify-center items-center my-10'>
+      <div className='my-10'>
         <div>
           <CountComp />
+        </div>
+    </div>
+      <div className='my-10'>
+        <div>
+          <Feature />
         </div>
     </div>
       <div className='my-20 px-5 md:px-10'>
