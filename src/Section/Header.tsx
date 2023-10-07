@@ -1,5 +1,4 @@
 import HouseSearch from '@/Components/HouseSearch/HouseSearch'
-import Image from 'next/image'
 import React from 'react'
 
 const Header = () => {
@@ -10,7 +9,7 @@ const Header = () => {
     
   
   <section
-  className="relative bg-[url('https://i.ibb.co/JKk9Q2j/Banner-Image.png')] bg-cover bg-center  bg-no-repeat flex-shrink-0 rounded-xl py-10   drop-shadow-sm max-w-screen-xl "
+  className="relative bg-[url('https://i.ibb.co/JKk9Q2j/Banner-Image.png')] bg-cover bg-center  bg-no-repeat flex-shrink-0 rounded-xl py-10   drop-shadow-sm max-w-screen-xl mx-auto "
 >
  
   <div

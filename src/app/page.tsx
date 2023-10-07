@@ -18,9 +18,11 @@ const Home = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
             {
               card.map((card, index) => {
-                return <>
+                return (
+                   <div key={index}>
                  <CardComp />
-                </>
+                </div>
+                )
               })
             }
          </div>
