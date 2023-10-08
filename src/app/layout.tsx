@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import NavbarComp from "@/Components/Navbar/NavbarComp";
+import FooterComp from "@/Components/Footer/FooterComp";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ReduxProvider>
           <NavbarComp />
           {children}
+          <FooterComp />
         </ReduxProvider>
       </body>
     </html>
