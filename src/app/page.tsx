@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import pic from "../../public/images/whychose.png";
 import { SiCheckmarx } from "react-icons/si";
+import Testimonial from "@/Section/Testimonial";
 const Home = () => {
   const card = [1, 2, 3, 4, 5, 6];
   return (
@@ -86,6 +87,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/*  here Testimonial  */}
+
+      <div className="my-10">
+        <Testimonial />
+      </div>
+
+      {/*  here Testimonial  */}
     </>
   );
 };
